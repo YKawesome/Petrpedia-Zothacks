@@ -7,6 +7,6 @@ export default function home() {
         <h1>Welcome To</h1>
         <h1 class = "Title">Petrpedia!</h1>
         <p>Petrpedia is a ultimate hub for Petr fans, with features to request trades, </p>
-      </>
+      </> 
     );
   }
