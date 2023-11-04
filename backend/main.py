@@ -14,8 +14,12 @@ import crud
 import models
 import schemas
 from database import SessionLocal, engine
+from sqlalchemy import create_engine
+from sqlalchemy_utils import database_exists, create_database
 
-models.Base.metadata.create_all(bind=engine)
+from pydantic import BaseModel
+from PIL import Image
+from datetime import datetimemodels.Base.metadata.create_all(bind=engine)
 
 # Initializing and setting configurations for your FastAPI application is one
 # of the first things you should do in your code.
@@ -142,4 +146,5 @@ def read_template(template_id: int, db: Session = Depends(get_db)):
 
 
 if __name__ == "__main__":
+    engine = create_engine("sqlite:///backend.db")
     uvicorn.run("main:app", port=5000, reload=True)
