@@ -1,5 +1,4 @@
 import { useState, Component} from "react";
-import "./App.css";
 import PetrSticker from "../sticker";
 
 /*
@@ -11,12 +10,14 @@ With App.jsx, we can also define global variables and routes to store informatio
 */
 class User extends Component {
     constructor(props) {
+        let {userId} = useParams();
         super(props);
         // Fetch
         this.state = {
             name: 'exampleName', 
             contactInfo: 'exampleInfo',
-            petrList: [0,1,2]
+            petrList: [0,1,2],
+            userId
         }
     }
     render() {
@@ -28,6 +29,7 @@ class User extends Component {
         <div class='username_title'>{this.state.name}</div>
         <div class='user_page_contact'>{this.state.contactInfo}</div>
         <div class='sticker_list'>{petrList}</div>
+        <div>{this.state.userId}</div>
       </>
     }
   }

@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import Root from "./routes/root";
 import ErrorPage from "./error-page";
 import Contact from "./routes/contact";
+import User from "./users/user"
 
 import {
   createBrowserRouter,
@@ -16,12 +17,6 @@ const router = createBrowserRouter([
     path: "/",
     element: <Root />,
     errorElement: <ErrorPage />,
-    children: [
-      {
-        path: "contacts/:contactId",
-        element: <Contact />,
-      },
-    ],
   },
   {
     path: "contacts/:contactId",
@@ -30,7 +25,7 @@ const router = createBrowserRouter([
   },
   {
     path: "user/:userId",
-    element: <p>user time</p>,
+    element: <User/>
   },
 ]);
 
