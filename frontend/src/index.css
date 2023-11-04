@@ -15,5 +15,8 @@ h1 {
 footer {
   display: block;
   background-color: lightblue;
-
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
