@@ -105,9 +105,6 @@ def read_user(user_id: int, db: Session = Depends(get_db)):
 
 @app.post("/drops-post/", response_model=schemas.Drop)
 def create_drop(drop: schemas.DropCreate, db: Session = Depends(get_db)):
-    # db_user = crud.get_user_by_email(db, email=user.email)
-    # if db_user:
-    #     raise HTTPException(status_code=400, detail="Email already registered")
     return crud.create_drop(db=db, drop=drop)
 
 
@@ -130,6 +127,9 @@ def read_drop(drop_id: int, db: Session = Depends(get_db)):
 
 @app.post("/templates-post/", response_model=schemas.PetrTemplate)
 def create_template(drop_id: int, template: schemas.PetrTemplateCreate, db: Session = Depends(get_db)):
+    drop_out_of_bounds = drop_id > len(crud.get_drops(db, limit=None))
+    if drop_out_of_bounds:
+        raise HTTPException(status_code=400, detail="drop_id out of bounds")
     return crud.create_template(db=db, template=template, drop_id=drop_id)
 
 
@@ -139,12 +139,41 @@ def read_templates(skip: int = 0, limit: int = 100, db: Session = Depends(get_db
     return templates
 
 
-@app.get("/templates-get/{drop_id}", response_model=schemas.PetrTemplate)
+@app.get("/templates-get/{template_id}", response_model=schemas.PetrTemplate)
 def read_template(template_id: int, db: Session = Depends(get_db)):
     db_template = crud.get_template(db, template_id=template_id)
     if db_template is None:
         raise HTTPException(status_code=404, detail="Petr Template not found")
     return db_template
+
+
+# *** Stickers ***
+
+
+@app.post("/stickers-post/", response_model=schemas.Sticker)
+def create_sticker(template_id: int, user_id: int, sticker: schemas.StickerCreate, db: Session = Depends(get_db)):
+    template_out_of_bounds = template_id > len(crud.get_templates(db, limit=None))
+    user_out_of_bounds = user_id > len(crud.get_users(db, limit=None))
+
+    if template_out_of_bounds:
+        raise HTTPException(status_code=400, detail="template_id out of bounds")
+    elif user_out_of_bounds:
+        raise HTTPException(status_code=400, detail="user_id out of bounds")
+    return crud.create_sticker(db=db, sticker=sticker, template_id=template_id, user_id=user_id)
+
+
+@app.get("/stickers-get/", response_model=list[schemas.Sticker])
+def read_stickers(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
+    stickers = crud.get_stickers(db, skip=skip, limit=limit)
+    return stickers
+
+
+@app.get("/stickers-get/{sticker_id}", response_model=schemas.Sticker)
+def read_sticker(sticker_id: int, db: Session = Depends(get_db)):
+    db_sticker = crud.get_sticker(db, sticker_id=sticker_id)
+    if db_sticker is None:
+        raise HTTPException(status_code=404, detail="Sticker not found")
+    return db_sticker
 
 
 if __name__ == "__main__":
