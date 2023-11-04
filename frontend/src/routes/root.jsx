@@ -46,3 +46,9 @@ export default function Root() {
       </>
     );
   }
+
+  export function Home() {
+    return (
+     <p>hello</p>
+    );
+  }
