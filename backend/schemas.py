@@ -45,14 +45,14 @@ class Drop(DropBase):
 
 class PetrTemplateBase(BaseModel):
     creator: str
-    number_of_stickers: str
+    number_of_stickers: int
 
 
-class PetrTemplateCreate(DropBase):
+class PetrTemplateCreate(PetrTemplateBase):
     pass
 
 
-class PetrTemplate(DropBase):
+class PetrTemplate(PetrTemplateBase):
     id: int
     drop_id: int
     stickers: list['Sticker']

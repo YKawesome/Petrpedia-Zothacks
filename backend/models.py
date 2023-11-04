@@ -20,7 +20,7 @@ class PetrTemplate(Base):  # TODO add image, drops_in
 
     id = Column(Integer, primary_key=True, index=True)
     creator = Column(String, index=True)
-    number_of_stickers: Column(Integer, index=True)
+    number_of_stickers = Column(Integer, index=True)
     drop_id = Column(Integer, ForeignKey("drops.id"))
 
     stickers = relationship("Sticker", back_populates="template")
