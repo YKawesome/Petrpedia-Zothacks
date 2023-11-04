@@ -36,4 +36,4 @@ class PetrSticker extends Component {
     }
 
 
-}
+}export default PetrSticker;
