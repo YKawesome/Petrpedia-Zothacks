@@ -19,7 +19,9 @@ from sqlalchemy_utils import database_exists, create_database
 
 from pydantic import BaseModel
 from PIL import Image
-from datetime import datetimemodels.Base.metadata.create_all(bind=engine)
+from datetime import datetime
+
+models.Base.metadata.create_all(bind=engine)
 
 # Initializing and setting configurations for your FastAPI application is one
 # of the first things you should do in your code.
