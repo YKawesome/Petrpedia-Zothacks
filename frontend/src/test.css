@@ -3,26 +3,61 @@ body{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-
-h3{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-.sticker_list{
-    background-color: #d2ecfc;
-    border-radius: 1em;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.user_info,.sticker_info{
+    display: grid
 }
 
-.PetrSticker{
-    /*padding: 1%,5%,1%,10%;*/
-    padding-left: 5%;
-    display: grid;
-    border-radius: 1em; 
-}
-
-.sticker_name{
+.profile_picture{
+    width:100%;
+    max-width:2em;
+    border-radius: 50%;
     grid-row-start: 1;
     grid-column-start: 1;
+    grid-row-end: 3;
+}
+
+.username{
+    grid-row-start:1;
+    grid-column-start: 3;
+}
+
+.user_id{
+    grid-row-start:2;
+    grid-column-start: 2;
+}
+
+.user_page_contact{
+    grid-row-start:3;
+    grid-column-start: 2;
+}
+
+.sticker_list,.owner_list{
+    background-color: #d2ecfc;
+    border-radius: 1em;
+    box-shadow: 0.2em 0.2em 0.5em 0em #00000033;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.PetrSticker,.User{
+    /*padding: 1%,5%,1%,10%;*/
+    padding-left: 2em;
+    display: grid;
+}
+
+.sticker_preview{
+    grid-row-start:1;
+    grid-column-start:1;
+    width:100%;
+    max-width:2em;
+}
+
+.sticker_full{
+    grid-row-start:1;
+    grid-column-start:1;
+}
+.sticker_name,.User{
+    grid-row-start: 1;
+    grid-column-start: 2;
     grid-row-end: 3;
 }
 
@@ -31,5 +66,5 @@ h3{
 }
 
 .willing_to_trade{
-    grid-column-start: 1;
+    grid-column-start: 2;
 }
