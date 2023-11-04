@@ -49,6 +49,7 @@ class PetrTemplate(PetrTemplateBase):
 
 class DropBase(BaseModel):
     drop_location: str
+    name: str
 
 
 class DropCreate(DropBase):

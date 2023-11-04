@@ -24,6 +24,7 @@ class Drop(Base):
 
     id = Column(Integer, primary_key=True, index=True)
     drop_location = Column(String, index=True)
+    name = Column(String, index=True)
     # participants: list[str]
     # date: datetime
 
