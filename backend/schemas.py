@@ -28,6 +28,7 @@ class PetrTemplateBase(BaseModel):
     name: str
     creator: str
     number_of_stickers: int
+    image: str
 
 
 class PetrTemplateCreate(PetrTemplateBase):
