@@ -36,7 +36,7 @@ def get_stickers(db: Session, skip: int = 0, limit: int = 100):
     return db.query(models.Sticker).offset(skip).limit(limit).all()
 
 
-def create_sticker(db: Session, sticker: schemas.Sticker, user_id: int, template_id: int)
+def create_sticker(db: Session, sticker: schemas.Sticker, user_id: int, template_id: int):
     db_sticker = models.Sticker(**sticker.dict(), owner_id=user_id, template_id=template_id)
     db.add(db_sticker)
     db.commit()
@@ -70,8 +70,8 @@ def get_templates(db: Session, skip: int = 0, limit: int = 100):
     return db.query(models.PetrTemplate).offset(skip).limit(limit).all()
 
 
-def create_template(db: Session, template: schemas.PetrTemplateCreate, drop_id: int)
-    db_template = models.Template(**template.dict(), drop_id=drop_id)
+def create_template(db: Session, template: schemas.PetrTemplateCreate, drop_id: int):
+    db_template = models.PetrTemplate(**template.dict(), drop_id=drop_id)
     db.add(db_template)
     db.commit()
     db.refresh(db_template)
