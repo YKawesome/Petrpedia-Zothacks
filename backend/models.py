@@ -11,6 +11,8 @@ class PetrTemplate(Base):  # TODO add image, drops_in
     name = Column(String, index=True)
     creator = Column(String, index=True)
     number_of_stickers = Column(Integer, index=True)
+    image = Column(String, index=True)
+
     drop_id = Column(Integer, ForeignKey("drops.id"))
 
     stickers = relationship("Sticker", back_populates="template")
@@ -22,6 +24,7 @@ class Drop(Base):
 
     id = Column(Integer, primary_key=True, index=True)
     drop_location = Column(String, index=True)
+    name = Column(String, index=True)
     # participants: list[str]
     # date: datetime
 

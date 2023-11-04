@@ -28,6 +28,7 @@ class PetrTemplateBase(BaseModel):
     name: str
     creator: str
     number_of_stickers: int
+    image: str
 
 
 class PetrTemplateCreate(PetrTemplateBase):
@@ -48,6 +49,7 @@ class PetrTemplate(PetrTemplateBase):
 
 class DropBase(BaseModel):
     drop_location: str
+    name: str
 
 
 class DropCreate(DropBase):
