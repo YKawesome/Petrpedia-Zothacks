@@ -1,6 +1,4 @@
 import { useState, Component} from "react";
-import "./App.css";
-
 
 
 class PetrSticker extends Component {
