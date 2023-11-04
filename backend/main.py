@@ -92,6 +92,7 @@ class User(BaseModel):
     email: str
     sticker_list: list[str]
 
+
 @app.post("/petr-templates-post")
 async def create_petr_template(petr_template: PetrTemplate):
     return petr_template
