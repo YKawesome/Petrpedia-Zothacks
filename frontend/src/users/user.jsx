@@ -1,5 +1,6 @@
 import { useState, Component} from "react";
 import PetrSticker from "../sticker";
+import { useParams } from "react-router-dom";
 
 /*
 This is the starting point of our application. Here, we can begin coding 
@@ -10,15 +11,17 @@ With App.jsx, we can also define global variables and routes to store informatio
 */
 class User extends Component {
     constructor(props) {
-        let {userId} = useParams();
-        super(props);
-        // Fetch
-        this.state = {
-            name: 'exampleName', 
-            contactInfo: 'exampleInfo',
-            petrList: [0,1,2],
-            userId
-        }
+      super(props);
+      this.state = {name: "nobody", contactInfo: "", petrList: [], userId: 0};
+    }
+    componentDidMount() {
+      let {userId} = this.props.params;
+      console.log(userId);
+      fetch("//localhost:5000/users-get/"+userId).then(value => {
+        value.json().then(data=> {
+          this.setState({name: data.name, contactInfo: data.email, petrList: data.stickers, userId})
+        });
+      });
     }
     render() {
       let petrList = [];
@@ -33,4 +36,4 @@ class User extends Component {
       </>
     }
   }
-export default User;
+export default (props) => (<User {...props} params={useParams()}></User>);
