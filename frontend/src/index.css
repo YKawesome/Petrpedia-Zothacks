@@ -1,6 +1,7 @@
 html, body {
   font-family: 'Inter', sans-serif;
-  text-align: center
+  text-align: center;
+  margin: 0px;
 }
 
 h1 {
