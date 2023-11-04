@@ -1,6 +1,35 @@
 body{
     margin: 5em;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 
+h3{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.sticker_list{
+    background-color: #d2ecfc;
+    border-radius: 1em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
+.PetrSticker{
+    /*padding: 1%,5%,1%,10%;*/
+    padding-left: 5%;
+    display: grid;
+    border-radius: 1em; 
+}
+
+.sticker_name{
+    grid-row-start: 1;
+    grid-column-start: 1;
+    grid-row-end: 3;
+}
+
+.dropper,.drop_id{
+    grid-column-start: 2;
+}
+
+.willing_to_trade{
+    grid-column-start: 1;
+}

@@ -21,6 +21,28 @@ class Sticker(StickerBase):
         from_attributes = True
 
 
+# *** Petr Templates ***
+
+
+class PetrTemplateBase(BaseModel):
+    name: str
+    creator: str
+    number_of_stickers: int
+
+
+class PetrTemplateCreate(PetrTemplateBase):
+    pass
+
+
+class PetrTemplate(PetrTemplateBase):
+    id: int
+    drop_id: int
+    stickers: list['Sticker']
+
+    class Config:
+        from_attributes = True
+
+
 # *** Drops ***
 
 
@@ -40,25 +62,6 @@ class Drop(DropBase):
         from_attributes = True
 
 
-# *** Petr Templates ***
-
-
-class PetrTemplateBase(BaseModel):
-    creator: str
-    number_of_stickers: int
-
-
-class PetrTemplateCreate(PetrTemplateBase):
-    pass
-
-
-class PetrTemplate(PetrTemplateBase):
-    id: int
-    drop_id: int
-    stickers: list['Sticker']
-
-    class Config:
-        from_attributes = True
 
 
 # *** Users ***
