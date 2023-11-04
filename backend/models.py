@@ -10,10 +10,9 @@ class Drop(Base):
     id = Column(Integer, primary_key=True, index=True)
     drop_location = Column(String, index=True)
     # participants: list[str]
-    # stickers: list[int]
     # date: datetime
 
-    stickers = relationship("Sticker", back_populates="drop")
+    templates = relationship("PetrTemplate", back_populates="drop")
 
 
 class PetrTemplate(Base):  # TODO add image, drops_in
@@ -22,8 +21,10 @@ class PetrTemplate(Base):  # TODO add image, drops_in
     id = Column(Integer, primary_key=True, index=True)
     creator = Column(String, index=True)
     number_of_stickers: Column(Integer, index=True)
+    drop_id = Column(Integer, ForeignKey("drops.id"))
 
     stickers = relationship("Sticker", back_populates="template")
+    drop = relationship("Drop", back_populates="templates")
 
 
 class Sticker(Base):
@@ -35,11 +36,9 @@ class Sticker(Base):
 
     owner_id = Column(Integer, ForeignKey("users.id"))
     template_id = Column(Integer, ForeignKey("petr_templates.id"))
-    drop_id = Column(Integer, ForeignKey("drops.id"))
 
     owner = relationship("User", back_populates="stickers")
     template = relationship("PetrTemplate", back_populates="stickers")
-    drop = relationship("Drop", back_populates="stickers")
 
 
 class User(Base):

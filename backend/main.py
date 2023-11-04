@@ -59,7 +59,6 @@ def read_item(item_id: int, q: Optional[str] = None):
 # TODO: Add POST route for demo
 
 
-
 # @app.post("/petr-templates-post")
 # async def create_petr_template(petr_template: 'PetrTemplate'):
 #     return petr_template
