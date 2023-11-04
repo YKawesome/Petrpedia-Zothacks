@@ -9,7 +9,10 @@ export default function home() {
         <p>Petrpedia is a ultimate hub for Petr fans, with features to request trades, browse Petrs and contribute to the ever-growing online community.</p>
         <button>Login</button>
         <button>+ Create Template</button>
+        <br></br>
+        <input type="text" placeholder="Search..">
 
+        </input>
         <footer>
           <h3>Contact</h3>
       
