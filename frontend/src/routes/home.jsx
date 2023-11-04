@@ -6,7 +6,7 @@ export default function home() {
       <>
         <h1>Welcome To</h1>
         <h1 class = "Title">Petrpedia!</h1>
-        <p>Petrpedia is a ultimate hub for Petr fans, with features to request trades, browse Petrs and contribute to the ever-growing online community.</p>
+        <p>Petrpedia is a ultimate hub for Petr fans, with features to request trades, browse Petrs and contribute to the ever-growing community online.</p>
         <button>Login</button>
         <button>+ Create Template</button>
         <br></br>
@@ -15,7 +15,7 @@ export default function home() {
         </input>
         <footer>
           <h3>Contact</h3>
-      
+
         </footer>
       </>
     );
