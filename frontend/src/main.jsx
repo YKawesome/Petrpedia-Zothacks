@@ -9,7 +9,6 @@ import NewTemplate from "./new_template";
 import DropperPage from "./dropper";
 import TradingPage from "./trading_page"
 import NewUser from "./new_user";
- HEAD
 import Template from "./template";
 
 import NewDrop from "./new_drop";
@@ -67,7 +66,6 @@ This code renders our project so it can be viewed in a browser.
 */
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <link rel="stylesheet" href="../src/test.css"></link>
     <RouterProvider router={router} />
   </React.StrictMode>
 );
