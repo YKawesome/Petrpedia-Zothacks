@@ -1,8 +1,29 @@
-body{
+/*body{
     margin: 5em;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+}*/
 
+html, body {
+    font-family: 'Inter', sans-serif;
+    text-align: left;
+    background-color: #2C2F33;
+    color: white;
+    margin: 2em;
+  }
+  
+.trade_title{
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 75px;
+  margin-top: 20px;
+  background: linear-gradient(90deg, #7289da, #f47fff);
+  background-clip: text;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  color: transparent;
+}
 .profile_picture{
     width:100%;
     max-width:2em;
@@ -28,7 +49,7 @@ body{
 }
 
 .sticker_list,.owner_list{
-    background-color: #d2ecfc;
+    background-color: #7289DA;
     border-radius: 1em;
     box-shadow: 0.2em 0.2em 0.5em 0em #00000033;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -37,7 +58,7 @@ body{
 .sticker_info,.user_info{
     display: grid;
     grid-template-columns: 1fr 4fr;
-    background-color: #e1d2fc;
+    background-color: #f47fff;
     border-radius: 1em;
     box-shadow: 0.2em 0.2em 0.5em 0em #00000033;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
