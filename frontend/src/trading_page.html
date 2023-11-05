@@ -13,8 +13,15 @@ It served as an html document that dynamically inserts React code from your appl
   </head>
   
   <body>
+    <h1>Trade Your Petrs!</h1>
     <div class="trade_search">
-        <input type="text" placeholder="Search stickers or users...">
+        <form id="form">
+            <input type="search" id="query"
+            placeholder="Search stickers or users...">
+            <button type="submit">Search
+                <!--<div class="svg-search-icon"></div> can't get a search icon to work--> 
+            </button>
+        </form>
     </div>
   </body>
 </html>
