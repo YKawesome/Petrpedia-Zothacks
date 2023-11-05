@@ -14,8 +14,12 @@ export default function home() {
             <img class = "circle" src = "https://static.thenounproject.com/png/2729266-200.png" height = "40"></img>
           </a>
           <a className = "headerEle" href="#profile">
+            <img className = "circle" src = "https://cdn.iconscout.com/icon/free/png-256/free-switch-1470433-1244947.png" height = "50"></img>
+          </a>
+          <a className = "headerEle" href="#profile">
             <img className = "circle" src = "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" height = "40"></img>
           </a>
+
           
         </header>
         <div id = "page">
