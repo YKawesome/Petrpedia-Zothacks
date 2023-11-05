@@ -29,9 +29,9 @@ class User extends Component {
         petrList.push(<PetrSticker id={this.state.petrList[i]}></PetrSticker>)
       }
       return <>
-        <div class='username_title'>{this.state.name}</div>
-        <div class='user_page_contact'>{this.state.contactInfo}</div>
-        <div class='sticker_list'>{petrList}</div>
+        <div className='username_title'>{this.state.name}</div>
+        <div className='user_page_contact'>{this.state.contactInfo}</div>
+        <div className='sticker_list'>{petrList}</div>
         <div>{this.state.userId}</div>
       </>
     }

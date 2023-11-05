@@ -13,9 +13,11 @@ class StickerCreate(StickerBase):
 
 
 class Sticker(StickerBase):
+    # image_url: str
     id: int
     owner_id: int
     template_id: int
+    image_url: str
 
     class Config:
         from_attributes = True

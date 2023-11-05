@@ -99,3 +99,18 @@ footer {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
+
+.ntname, .ntcreator, .ntnumstickers, .ntdrop, .ntimage {
+  margin-bottom: 15px;
+}
+
+.templateoptions {
+  font-size: 15px;
+  /* display: grid; */
+}
+
+input, select {
+  width: 200px;
+}
+
+

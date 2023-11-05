@@ -37,7 +37,7 @@ def get_stickers(db: Session, skip: int = 0, limit: int = 100):
 
 
 def create_sticker(db: Session, sticker: schemas.Sticker, user_id: int, template_id: int):
-    db_sticker = models.Sticker(**sticker.dict(), owner_id=user_id, template_id=template_id)
+    db_sticker = models.Sticker(**sticker.dict(), owner_id=user_id, template_id=template_id, image_url=db.query(models.PetrTemplate).filter(models.PetrTemplate.id == template_id).first().image)
     db.add(db_sticker)
     db.commit()
     db.refresh(db_sticker)
