@@ -1,3 +1,7 @@
+# Models.py
+# This module defines the database representations of the
+# main four classes (PetrTemplate, Sticker, Drop, User).
+# Effectively, this establishes 
 from sqlalchemy import Boolean, Column, ForeignKey, Integer, String
 from sqlalchemy.orm import relationship
 

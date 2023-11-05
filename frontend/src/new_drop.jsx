@@ -27,7 +27,7 @@ class NewDrop extends Component {
         this.submit = this.submit.bind(this);
     }
     submit() {
-        postData("//localhost:5000/users-post", {name: this.state.name, drop_location: this.state.drop_location});
+        postData("//localhost:5000/drops-post", {name: this.state.name, drop_location: this.state.drop_location});
     }
     render() {
 
