@@ -11,10 +11,26 @@ html, body {
     margin: 2em;
   }
   
+  header {
+    text-align: right;
+    top: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: #7289DA;
+    overflow: hidden;
+    display: block;
+    position: fixed;
+  }
+  
+  .circle {
+    border-radius: 30%;
+    object-fit:cover;
+  }
+
 .trade_title{
   text-align: center;
   font-family: sans-serif;
-  font-size: 75px;
+  font-size: 120px;
   margin-top: 20px;
   background: linear-gradient(90deg, #7289da, #f47fff);
   background-clip: text;
