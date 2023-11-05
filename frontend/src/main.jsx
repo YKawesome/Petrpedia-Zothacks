@@ -8,6 +8,8 @@ import User from "./users/user";
 import NewTemplate from "./new_template";
 import DropperPage from "./dropper";
 import NewUser from "./new_user";
+import NewDrop from "./new_drop";
+
 import {
   createBrowserRouter,
   RouterProvider,
@@ -40,6 +42,10 @@ const router = createBrowserRouter([
   {
     path: "new_user",
     element: <NewUser />
+  },
+  {
+    path: "new_drop",
+    element: <NewDrop />
   }
 ]);
 
