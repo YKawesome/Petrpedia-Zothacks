@@ -6,7 +6,7 @@ import ErrorPage from "./error-page";
 import Contact from "./routes/contact";
 import User from "./users/user";
 import NewTemplate from "./new_template";
-
+import DropperPage from "./dropper";
 import {
   createBrowserRouter,
   RouterProvider,
@@ -31,6 +31,10 @@ const router = createBrowserRouter([
   {
     path: "new_template",
     element: <NewTemplate />
+  },
+  {
+    path: "creator/:dropperName",
+    element: <DropperPage />
   }
 ]);
 
