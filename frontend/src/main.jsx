@@ -7,6 +7,7 @@ import Contact from "./routes/contact";
 import User from "./users/user";
 import NewTemplate from "./new_template";
 import DropperPage from "./dropper";
+import TradingPage from "./trading_page"
 import NewUser from "./new_user";
 import NewDrop from "./new_drop";
 
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
   {
     path: "creator/:dropperName",
     element: <DropperPage />
+  },
+  {
+    path: "trade",
+    element: <TradingPage></TradingPage>
   },
   {
     path: "new_user",
