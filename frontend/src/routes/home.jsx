@@ -14,11 +14,12 @@ export default function home() {
           </a>
           
         </header>
-        <h1 className = "welcome">Welcome To</h1>
-        <h1 className = "title">Petrpedia</h1>
-        <p>Petrpedia is a ultimate hub for Petr fans, with features to request trades, browse Petrs and contribute to the ever-growing community online.</p>
-        <button className="login">Login</button>
-        <a href='/new_template'><button className="createTemplate">+ Create Template</button></a>
+
+        <h1 class = "welcome">Welcome To</h1>
+        <h1 class = "title">Petrpedia</h1>
+        <p>Petrpedia is an ultimate hub for Petr fans, with features to request trades, browse Petrs and contribute to the ever-growing community online.</p>
+        <button class="login">Login</button>
+        <a href='/new_template'><button class="createTemplate">+ Create Template</button></a>
         <br></br>
         <footer>
           <h3>Contact</h3>
