@@ -70,6 +70,14 @@ def get_templates(db: Session, skip: int = 0, limit: int = 100):
     return db.query(models.PetrTemplate).offset(skip).limit(limit).all()
 
 
+def get_template(db: Session, template_id: int):
+    return db.query(models.PetrTemplate).filter(models.PetrTemplate.id == template_id).first()
+
+
+def get_templates_by_creator(db: Session, creator: str):
+    return list(db.query(models.PetrTemplate).filter(models.PetrTemplate.creator == creator))
+
+
 def create_template(db: Session, template: schemas.PetrTemplateCreate, drop_id: int):
     db_template = models.PetrTemplate(**template.dict(), drop_id=drop_id)
     db.add(db_template)

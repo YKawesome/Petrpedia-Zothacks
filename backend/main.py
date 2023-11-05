@@ -121,6 +121,11 @@ def read_templates(skip: int = 0, limit: int = 100, db: Session = Depends(get_db
     return templates
 
 
+@app.get("/templates-get-by-creator/{creator}", response_model=list[schemas.PetrTemplate])
+def read_templates_by_creator(creator: str, db: Session = Depends(get_db)):
+    return crud.get_templates_by_creator(db, creator)
+
+
 @app.get("/templates-get/{template_id}", response_model=schemas.PetrTemplate)
 def read_template(template_id: int, db: Session = Depends(get_db)):
     db_template = crud.get_template(db, template_id=template_id)
