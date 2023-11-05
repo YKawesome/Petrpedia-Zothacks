@@ -13,8 +13,8 @@ export default function home() {
           <a class = "headerEle" href="#profile">
             <img class = "circle" src = "https://static.thenounproject.com/png/2729266-200.png" height = "40"></img>
           </a>
-          <a class = "headerEle" href="#profile">
-            <img class = "circle" src = "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" height = "40"></img>
+          <a className = "headerEle" href="#profile">
+            <img className = "circle" src = "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" height = "40"></img>
           </a>
           
         </header>

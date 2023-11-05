@@ -35,6 +35,7 @@ class Sticker(Base):
     id = Column(Integer, primary_key=True, index=True)
     current_location = Column(String, index=True)
     willing_to_trade = Column(Boolean, index=True, default=False)
+    image_url = Column(String, index=True)
 
     owner_id = Column(Integer, ForeignKey("users.id"))
     template_id = Column(Integer, ForeignKey("petr_templates.id"))

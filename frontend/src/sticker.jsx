@@ -6,7 +6,7 @@ class PetrSticker extends Component {
 
         super(props);
         let id = props.id;
-        // fetch line
+        
 
         this.state={
 
@@ -19,14 +19,25 @@ class PetrSticker extends Component {
 
         }
 
+
     }
 
+    componentDidMount() {
+        let {userId} = this.props.params;
+        console.log(userId);
+        fetch("//localhost:5000/stickers-get/"+userId).then(value => {
+          value.json().then(data=> {
+            this.setState({name: data.name, contactInfo: data.email, petrList: data.stickers, userId})
+          });
+        });
+      }
+
     render() {
-        return <>
-        <div class='sticker_name'>{this.state.name}</div>  
-        <div class='dropper'>{this.state.dropper}</div>
-        <div class='drop_id'>{this.state.dropID}</div>
-        <div class='willing_to_trade'>{this.state.willingToTrade}</div>
+        return <> 
+        <div className='sticker_name'>{this.state.name}</div>  
+        <div className='dropper'>{this.state.dropper}</div>
+        <div className='drop_id'>{this.state.dropID}</div>
+        <div className='willing_to_trade'>{this.state.willingToTrade}</div>
 
         </>;
 
@@ -34,4 +45,6 @@ class PetrSticker extends Component {
     }
 
 
-}export default PetrSticker;
+}
+
+export default PetrSticker;
