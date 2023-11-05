@@ -1,3 +1,7 @@
+# crud.py
+# This module contains utility functions for CRUD
+# Create, Read, Update, Delete
+# These are utilized later for the GET/POST requests.
 from sqlalchemy.orm import Session
 import models
 import schemas

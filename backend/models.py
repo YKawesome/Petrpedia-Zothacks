@@ -1,7 +1,9 @@
 # Models.py
 # This module defines the database representations of the
 # main four classes (PetrTemplate, Sticker, Drop, User).
-# Effectively, this establishes 
+# Effectively, this establishes our relational database.
+# We utilized foreign keys to connect ids of one class
+# to parent classes using their own ids.
 from sqlalchemy import Boolean, Column, ForeignKey, Integer, String
 from sqlalchemy.orm import relationship
 

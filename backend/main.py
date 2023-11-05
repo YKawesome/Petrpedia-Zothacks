@@ -1,3 +1,7 @@
+# main.py
+# This is where we implemeneted the API to allow GET/POST requests.
+# This is also the file that hosts the backend server and
+# Brings everything together.
 from typing import Optional
 import uvicorn
 from fastapi import Depends, FastAPI, status, HTTPException

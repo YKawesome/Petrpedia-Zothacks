@@ -27,7 +27,7 @@ class NewSticker extends Component {
         this.submit = this.submit.bind(this);
     }
     submit() {
-        postData("//localhost:5000/stickers-post?template_id=" + this.state.template_id + '&user_id=' + this.state.user_id, {current_location: this.state.location});
+        postData("//localhost:5000/stickers-post?template_id=" + this.state.template_id + '&user_id=' + this.state.user_id, {current_location: this.state.location, willing_to_trade: true});
     }
     render() {
 
