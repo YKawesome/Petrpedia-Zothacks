@@ -26,7 +26,7 @@ html, body {
 }
 .profile_picture{
     width:100%;
-    max-width:2em;
+    max-width:7em;
     border-radius: 50%;
     grid-row-start: 1;
     grid-column-start: 1;
@@ -49,6 +49,7 @@ html, body {
 }
 
 .sticker_list,.owner_list{
+    padding: 1em;
     background-color: #7289DA;
     border-radius: 1em;
     box-shadow: 0.2em 0.2em 0.5em 0em #00000033;
@@ -56,6 +57,7 @@ html, body {
 }
 
 .sticker_info,.user_info{
+    padding: 1em;
     display: grid;
     grid-template-columns: 1fr 4fr;
     background-color: #f47fff;
@@ -75,10 +77,11 @@ html, body {
     grid-row-start:1;
     grid-column-start:1;
     width:100%;
-    max-width:2em;
+    max-width:7em;
 }
-
 .sticker_full{
+    width:100%;
+    max-width:20em;
     grid-row-start:1;
     grid-column-start:1;
 }
