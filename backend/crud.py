@@ -56,7 +56,7 @@ def get_drops(db: Session, skip: int = 0, limit: int = 100):
 
 
 def create_drop(db: Session, drop: schemas.DropCreate):
-    db_user = models.Drop(drop_location=drop.drop_location)
+    db_user = models.Drop(drop_location=drop.drop_location, name=drop.name)
     db.add(db_user)
     db.commit()
     db.refresh(db_user)

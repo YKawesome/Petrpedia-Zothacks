@@ -64,8 +64,6 @@ class Drop(DropBase):
         from_attributes = True
 
 
-
-
 # *** Users ***
 
 
