@@ -7,11 +7,8 @@ import Contact from "./routes/contact";
 import User from "./users/user";
 import NewTemplate from "./new_template";
 import DropperPage from "./dropper";
-<<<<<<< HEAD
 import TradingPage from "./trading_page"
-=======
 import NewUser from "./new_user";
->>>>>>> f906c14606eff8b2ac560886c47c0453e96296c0
 import {
   createBrowserRouter,
   RouterProvider,
