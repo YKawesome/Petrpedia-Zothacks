@@ -9,7 +9,12 @@ import NewTemplate from "./new_template";
 import DropperPage from "./dropper";
 import TradingPage from "./trading_page"
 import NewUser from "./new_user";
+ HEAD
 import Template from "./template";
+
+import NewDrop from "./new_drop";
+
+
 import {
   createBrowserRouter,
   RouterProvider,
@@ -50,6 +55,10 @@ const router = createBrowserRouter([
   {
     path: "design/:templateId",
     element: <Template></Template>
+  },
+  {
+    path: "new_drop",
+    element: <NewDrop />
   }
 ]);
 
