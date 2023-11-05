@@ -9,6 +9,7 @@ import NewTemplate from "./new_template";
 import DropperPage from "./dropper";
 import TradingPage from "./trading_page"
 import NewUser from "./new_user";
+import Template from "./template";
 import {
   createBrowserRouter,
   RouterProvider,
@@ -45,6 +46,10 @@ const router = createBrowserRouter([
   {
     path: "new_user",
     element: <NewUser />
+  },
+  {
+    path: "design/:templateId",
+    element: <Template></Template>
   }
 ]);
 
@@ -53,6 +58,7 @@ This code renders our project so it can be viewed in a browser.
 */
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
+    <link rel="stylesheet" href="../src/test.css"></link>
     <RouterProvider router={router} />
   </React.StrictMode>
 );
