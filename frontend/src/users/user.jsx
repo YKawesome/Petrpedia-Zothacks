@@ -21,6 +21,7 @@ class User extends Component {
       fetch("//localhost:5000/users-get/"+userId).then(value => {
         value.json().then(data=> {
           this.setState({name: data.name, contactInfo: data.email, petrList: data.stickers, userId})
+          console.log(data);
         });
       });
     }
@@ -29,14 +30,14 @@ class User extends Component {
       for(let i = 0;i<this.state.petrList.length;i++) {
         petrList.push(<div key={i}>
             <div className="sticker_location">{this.state.petrList[i].current_location}</div>
-            <Template params={{templateId: this.state.petrList[i].id}}></Template>
+            <img src={"//localhost:5000/templates-get-image/?image_path=" +encodeURIComponent(this.state.petrList[i].image_url)}></img>
+            <div>{this.state.petrList[i].willing_to_trade?"Will trade":"Will not trade"}</div>
         </div>)
       }
       return <>
         <div className='username_title'>{this.state.name}</div>
         <div className='user_page_contact'>{this.state.contactInfo}</div>
         <div className='sticker_list'>{petrList}</div>
-        <div>{this.state.userId}</div>
       </>
     }
   }
