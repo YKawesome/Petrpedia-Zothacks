@@ -2,6 +2,7 @@ from typing import Optional
 import uvicorn
 from fastapi import Depends, FastAPI, status, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse
 from sqlalchemy.orm import Session
 import crud
 import models
@@ -132,6 +133,11 @@ def read_template(template_id: int, db: Session = Depends(get_db)):
     if db_template is None:
         raise HTTPException(status_code=404, detail="Petr Template not found")
     return db_template
+
+
+@app.get("/templates-get-image/")
+def get_image_from_template(image_path: str):
+    return FileResponse(image_path)
 
 
 # *** Stickers ***
