@@ -6,7 +6,11 @@ html, body {
   margin: 0px;
 }
 
-
+button {
+  margin: 5px;
+  border-radius: 12px;
+  padding: 20px;
+}
 
 p {
   font-size: 25px;
@@ -59,4 +63,15 @@ footer {
   left: 0;
   bottom: 0;
   width: 100%;
+}
+
+.circle {
+  border-radius: 30%;
+  object-fit:cover;
+}
+
+.headerEle {
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
