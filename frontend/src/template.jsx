@@ -1,9 +1,9 @@
 import { useState, Component} from "react";
-import "./App.css";
+import { useParams } from "react-router-dom"
 
 class Template extends Component {
 
-    contructor (props){
+    constructor(props) {
         super(props);
         //Fetch
         this.state = {
@@ -25,7 +25,7 @@ class Template extends Component {
 
     render(){
         return <>
-        <div class=""></div>
+        <div className=""></div>
         </>
     }
 

@@ -1,5 +1,6 @@
 import { useState, Component} from "react";
 import PetrSticker from "../sticker";
+import Template from "../template"
 import { useParams } from "react-router-dom";
 
 /*
@@ -25,8 +26,11 @@ class User extends Component {
     }
     render() {
       let petrList = [];
-      for(let i = 0;i<this.state.petrList;i++) {
-        petrList.push(<PetrSticker id={this.state.petrList[i]}></PetrSticker>)
+      for(let i = 0;i<this.state.petrList.length;i++) {
+        petrList.push(<div key={i}>
+            <div className="sticker_location">{this.state.petrList[i].current_location}</div>
+            <Template params={{templateId: this.state.petrList[i].id}}></Template>
+        </div>)
       }
       return <>
         <div className='username_title'>{this.state.name}</div>
