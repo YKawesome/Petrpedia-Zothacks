@@ -6,7 +6,7 @@ class PetrSticker extends Component {
 
         super(props);
         let id = props.id;
-        // fetch line
+        
 
         this.state={
 
@@ -19,7 +19,18 @@ class PetrSticker extends Component {
 
         }
 
+
     }
+
+    componentDidMount() {
+        let {userId} = this.props.params;
+        console.log(userId);
+        fetch("//localhost:5000/stickers-get/"+userId).then(value => {
+          value.json().then(data=> {
+            this.setState({name: data.name, contactInfo: data.email, petrList: data.stickers, userId})
+          });
+        });
+      }
 
     render() {
         return <>
