@@ -6,10 +6,13 @@ export default function home() {
       <>
         <div class="topnav">
           <input type="text" placeholder="Search.."></input>
-          <a class="active" href="#home">Home</a>
-          <a href="#news">News</a>
-          <a href="#contact">Contact</a>
-          <a href="#about">About</a>
+          <a href="#profile">
+            <img src = "https://static.thenounproject.com/png/2729266-200.png" height = "40"></img>
+          </a>
+          <a href="#profile">
+            <img src = "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" height = "40"></img>
+          </a>
+          
         </div>
         <h1>Welcome To</h1>
         <h1 class = "title">Petrpedia</h1>
