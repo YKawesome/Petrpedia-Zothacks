@@ -50,24 +50,22 @@ class NewTemplate extends Component {
 
         return(
             <>
-                <label>Name:
-                <input type = "text" value={this.state.name} onChange={event => this.setState({name:event.target.value})} ></input>
-                </label>
-                <label>Creator:
+                <h1 className="templatecreate">Create a Template</h1>
+                <div className="templateoptions">
+                    
+                    <h2 className="ntname"> Name: </h2>
+                    <input type = "nttext" value={this.state.name} onChange={event => this.setState({name:event.target.value})} ></input>
+                    <h2 className="ntcreator">Creator: </h2>
                     <input type = "text" value={this.state.creator} onChange={event=> this.setState({creator:event.target.value})}></input>
-                </label>
-                <label>Number of Stickers:
+                    <h2 className="ntnumstickers">Number of Stickers: </h2>
                     <input type = "number" value={this.state.num_stickers} onChange={event=> this.setState({num_stickers:event.target.value})}></input>
-                </label>
-                <label>Drop:
+                    <h2 className="ntdrop">Drop: </h2>
                     <select onChange={event=> this.setState({dropId:event.target.value})}>
                         {dropsDropDown} 
                     </select>
-                </label>
-                <label>Image:
-                    <input type = "file" onChange={event=> convertImageToBase64(event.target.files[0],str=>this.setState({image:str}))}>
-                    </input>
-                </label>
+                    <h2 className="ntimage">Image: </h2>
+                    <input type = "file" onChange={event=> convertImageToBase64(event.target.files[0],str=>this.setState({image:str}))}></input>
+                </div>
                 <button onClick={this.submit}>Submit</button>
             </>
 

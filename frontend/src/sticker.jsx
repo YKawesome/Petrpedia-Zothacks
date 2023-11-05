@@ -33,11 +33,11 @@ class PetrSticker extends Component {
       }
 
     render() {
-        return <>
-        <div class='sticker_name'>{this.state.name}</div>  
-        <div class='dropper'>{this.state.dropper}</div>
-        <div class='drop_id'>{this.state.dropID}</div>
-        <div class='willing_to_trade'>{this.state.willingToTrade}</div>
+        return <> 
+        <div className='sticker_name'>{this.state.name}</div>  
+        <div className='dropper'>{this.state.dropper}</div>
+        <div className='drop_id'>{this.state.dropID}</div>
+        <div className='willing_to_trade'>{this.state.willingToTrade}</div>
 
         </>;
 
@@ -45,4 +45,6 @@ class PetrSticker extends Component {
     }
 
 
-}export default PetrSticker;
+}
+
+export default PetrSticker;
