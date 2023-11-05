@@ -10,9 +10,8 @@ import DropperPage from "./dropper";
 import TradingPage from "./trading_page"
 import NewUser from "./new_user";
 import Template from "./template";
-
 import NewDrop from "./new_drop";
-
+import NewSticker from "./new_sticker";
 
 import {
   createBrowserRouter,
@@ -58,6 +57,10 @@ const router = createBrowserRouter([
   {
     path: "new_drop",
     element: <NewDrop />
+  },
+  {
+    path: "new_sticker",
+    element: <NewSticker />
   }
 ]);
 

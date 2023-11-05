@@ -43,16 +43,20 @@ h1.templatecreate {
   font-size: 75px
 }
 
+.newsticker {
+  width: 16vw;
+}
+
 .login {
-  width: 20vw;
+  width: 16vw;
 }
 
 .createTemplate {
-  width: 25vw;
+  width: 16vw;
 }
 
 .newdrop {
-  width: 20vw;
+  width: 16vw;
 }
 
 .moveup {

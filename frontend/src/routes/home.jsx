@@ -28,6 +28,7 @@ export default function home() {
             <a href="/new_user"><button class="login">+ Create A User</button></a>
             <a href="/new_template"><button class="createTemplate">+ Create Template</button></a>
             <a href="/new_drop"><button class="newdrop">+ Create A Drop</button></a>
+            <a href="/new_sticker"><button class="newsticker">Own A Sticker</button></a>
           </div>
         </div>
       </>
