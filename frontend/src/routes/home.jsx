@@ -24,7 +24,7 @@ export default function home() {
             <h1 class = "title">Petrpedia!</h1>
             <p>Petrpedia is a ultimate hub for Petr fans, with features to request trades, browse Petrs and contribute to the ever-growing community online.</p>
             <button class="login">Login</button>
-            <button class="createTemplate">+ Create Template</button>
+            <a href="/new_template"><button class="createTemplate">+ Create Template</button></a>
           </div>
         </div>
       </>
