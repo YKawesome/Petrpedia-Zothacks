@@ -1,5 +1,5 @@
 # Petrpedia
-
+***THIS REPO IS ARCHIVED—CHECK PETRPEDIA FOR THE CURRENT VERSION!***
 ## Introduction
 
 Welcome to the Petrpedia!
