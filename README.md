@@ -15,5 +15,24 @@ Since the first release, many other Petr accounts have been created; these remix
 As such, we, the creators of Petrpedia, have decided that we want to contribute to Petr culture by creating an online catalogue/trading hub!
 
 # Classes
-We have 4 primary classes utilized in this...
+We utilized 4 primary classes (and as such, our database had a table representing each).
+Because the structure is a database, each class also has an autoincremented ID.
+
+## User
+A User is someone using the site. They have a name, email, and a collection of stickers.
+
+## PetrTemplate
+A PetrTemplate is the "design" of a certain sticker. When a Petr makes a sticker and posts the design on instagram for example, _that_ is a template. These have a name, creator, number of stickers created, image, and a drop (which drop it is from).
+
+## Sticker
+A Sticker is a physical instance of a PetrTemplate. It is something one can actually possess/own and it is part of a user's collection.
+
+## Drop
+A Drop is an event in which stickers are given out. These have a location and a name, and templates that are featured at the drop.
+
+# Backend
+The backend utilizes FastAPI and an SQLite database. We created GET and POST methods for our API that allows the frontend to communicate with the database; this allows for getting all users, templates, stickers, or drops, or creating these with specified parameters in schemas.py. There are some specific requests that use SQL to query results, such as searching templates by creators, or searching users by email.
+
+# Frontend
+The frontend utilizes react.js (and HTML/CSS/JS) to dynamically load pages such as a user page or creator page, by communicating with the backend. Additionally, the dropdowns and other features use GET requests from the backend to autopopulate themselves.
 
